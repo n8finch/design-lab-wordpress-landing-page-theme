@@ -114,7 +114,16 @@ add_action( 'widgets_init', 'landing_page_one_pager_widgets_init' );
  * Enqueue scripts and styles.
  */
 function landing_page_one_pager_scripts() {
+
+	wp_enqueue_style( 'google-font-lato', '//fonts.googleapis.com/css?family=Lato:300,400,700', array() );
+
+	wp_enqueue_style( 'ionicons', '//code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css', array() );
+
 	wp_enqueue_style( 'landing-page-one-pager-style', get_stylesheet_uri() );
+
+	wp_enqueue_script( 'jquery' );
+
+	wp_enqueue_script( 'compiled', get_template_directory_uri() . '/js/custom.js', array(), '1.0.0', true );
 
 	wp_enqueue_script( 'landing-page-one-pager-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 

@@ -154,4 +154,9 @@
   overflow: hidden;
 }
 
-// Based on code by Kasper Mikiewicz
+
+@media screen and (min-width: 53.75em) {
+  .modal .modal-fade-screen {
+    padding-top: 5em;
+  }
+}

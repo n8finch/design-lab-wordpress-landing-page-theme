@@ -4,30 +4,24 @@
 get_header(); ?>
 
 
-	<!doctype html>
-	<html lang="en">
-	<head>
-		<meta charset="UTF-8">
-		<title>Working With Design Lab</title>
-		<link href='https://fonts.googleapis.com/css?family=Lato:400,300,700' rel='stylesheet' type='text/css'>
-		<link rel="stylesheet" href='http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css'>
 
-		<link rel="stylesheet" href="style.css">
-	</head>
-	<body>
+
+			<?php
+			while ( have_posts() ) : the_post();
+
+			?>
 
 	<div id="fullPage">
 		<!--Hero Section-->
 		<section class="vertical-scrolling" id="hero-section">
 			<div class="hero">
 				<div class="hero-inner">
-					<img class="landing-logos" id="hero-logo" src="img/header-images/logo.png" alt="Logo Image">
+					<img class="landing-logos" id="hero-logo" src="wp-content/themes/design-lab-wordpress-landing-page-theme/img/header-images/logo.png" alt="Logo Image">
 					<div class="hero-copy">
 						<h1>Working<br/>With Design Lab</h1>
 						<h4>We’ve been helping startups launch and grow their businesses.<br/>We help you to fill the gap between development,<br/>design and product management.</h4>
 					</div>
 					<span class="hero-scroll icon ion-android-arrow-dropdown-circle"></span>
-					<!--<img class="hero-scroll" src="img/header-images/scroll.png" alt="Logo Image">-->
 				</div>
 			</div>
 		</section>
@@ -86,20 +80,20 @@ get_header(); ?>
 						<h2>What We Do</h2>
 					</div>
 					<div id="para">
-						<img class="landing-logos what-we-do-logos" src="img/what-we-do/pen.png">
+						<img class="landing-logos what-we-do-logos" src="wp-content/themes/design-lab-wordpress-landing-page-theme/img/what-we-do/pen.png">
 						<h3>Design</h3>
 						<p class="what-we-do-paragraphs">Our design practice offers a full range of services including branding strategy,
 							interaction and visual design and user experience testing.
 							Throughout your project, our designers create and implement visual designs and workflows, solicit user feedback, and work with you to make sure what gets built is what is needed.</p>
 					</div>
 					<div id="para">
-						<img class="landing-logos what-we-do-logos" src="img/what-we-do/code.png">
+						<img class="landing-logos what-we-do-logos" src="wp-content/themes/design-lab-wordpress-landing-page-theme/img/what-we-do/code.png">
 						<h3>Development</h3>
 						<p class="what-we-do-paragraphs">All engineers are fluent in the latest enterprise, mobile and web development technologies.
 							They collaborate with your team to write, test, and improve code on a daily basis, using proven practices such as test-driven development and pair programing.</p>
 					</div>
 					<div id="para">
-						<img class="landing-logos what-we-do-logos" src="img/what-we-do/clipboard.png">
+						<img class="landing-logos what-we-do-logos" src="wp-content/themes/design-lab-wordpress-landing-page-theme/img/what-we-do/clipboard.png">
 						<h3>Project Management</h3>
 						<p class="what-we-do-paragraphs">Planning and development is iterative. Because we are constantly coding and testing, the products we build are always ready to go live. This iterative process allows for changes as business requirements evolve.</p>
 					</div>
@@ -227,32 +221,12 @@ get_header(); ?>
 			</div>
 		</section>
 
-
-		<!--Footer Section-->
-		<section class="vertical-scrolling" id="footer-section">
-			<footer class="footer" role="contentinfo">
-				<p>
-                    <span id="footer-span">
-                    <img id="footer-logo" src="img/footer/footer-logo.png">
-                        © 2014. All Rights Reserved Ellipsis.com
-                    </span>
-				</p>
-			</footer>
-		</section>
 	</div>
 
-	</body>
-
-	</html>
 
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
 
-			<?php
-			while ( have_posts() ) : the_post();
-
-				get_template_part( 'template-parts/content', 'page' );
+				<?php
 
 				// If comments are open or we have at least one comment, load up the comment template.
 				if ( comments_open() || get_comments_number() ) :
@@ -262,8 +236,6 @@ get_header(); ?>
 			endwhile; // End of the loop.
 			?>
 
-		</main><!-- #main -->
-	</div><!-- #primary -->
 
 <?php
 get_footer();

@@ -11,16 +11,19 @@
 
 ?>
 
-	</div><!-- #content -->
 
-	<footer id="colophon" class="site-footer" role="contentinfo">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'landing-page-one-pager' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'landing-page-one-pager' ), 'WordPress' ); ?></a>
-			<span class="sep"> | </span>
-			<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'landing-page-one-pager' ), 'landing-page-one-pager', '<a href="http://www.n8finch.com" rel="designer">Nate Finch</a>' ); ?>
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
-</div><!-- #page -->
+<!--Footer Section-->
+<section class="vertical-scrolling" id="footer-section">
+	<footer class="footer" role="contentinfo">
+		<p>
+                    <span id="footer-span">
+                    <img id="footer-logo" src="wp-content/themes/design-lab-wordpress-landing-page-theme/img/footer/footer-logo.png">
+                        © 2014. All Rights Reserved Ellipsis.com
+                    </span>
+		</p>
+	</footer>
+</section>
+
 
 <?php wp_footer(); ?>
 
