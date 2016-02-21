@@ -13,13 +13,13 @@ get_header(); ?>
 
 	<div id="fullPage">
 		<!--Hero Section-->
-		<section class="vertical-scrolling" id="hero-section">
+		<section class="vertical-scrolling" id="hero-section" style="background-image: url('<?php the_field('hero_image'); ?>');">
 			<div class="hero">
 				<div class="hero-inner">
-					<img class="landing-logos" id="hero-logo" src="wp-content/themes/design-lab-wordpress-landing-page-theme/img/header-images/logo.png" alt="Logo Image">
+					<img class="landing-logos" id="hero-logo" src="<?php the_field('hero_logo'); ?>" alt="Logo Image">
 					<div class="hero-copy">
-						<h1>Working<br/>With Design Lab</h1>
-						<h4>We’ve been helping startups launch and grow their businesses.<br/>We help you to fill the gap between development,<br/>design and product management.</h4>
+						<h1><?php the_field('hero_title'); ?></h1>
+						<h4><?php the_field('hero_paragraph'); ?></h4>
 					</div>
 					<span class="hero-scroll icon ion-android-arrow-dropdown-circle"></span>
 				</div>
@@ -31,17 +31,10 @@ get_header(); ?>
 			<div id="wrap">
 				<div id="border">
 					<div id="title">
-						<h2>About Us</h2>
+						<h2><?php the_field('about_us_title'); ?></h2>
 					</div>
 					<div id="para">
-						<p> When you work with us, you are part of a team of committed collaborators.
-							All aspects of our software development process are integrated, iterative and agile.</p>
-						<p>Our approach unifies design, development and
-							product management to create exceptional products.
-							We start each project by understanding your business goals,
-							the user’s needs and the product requirements.
-							Then we help translate them into effective and elegant solutions.
-						</p>
+						<?php the_field('about_us_paragraph'); ?>
 					</div>
 				</div>
 			</div>
@@ -56,12 +49,10 @@ get_header(); ?>
 						<div id="border-services">
 							<div id="border-partial">
 								<div id="title-services">
-									<h2>Services</h2>
+									<h2><?php the_field('services_title'); ?></h2>
 								</div>
 								<div id="para-services">
-									<p>Before we sign a contract or write a line of code our team will spend the necessary time needed to understand your product vision.</p>
-									<p>The outcome of this scoping session is a proposal or high-level statement of work.
-										Based on your requirements, we can provide a complete offering or just the pieces you need. </p>
+									<?php the_field('services_paragraph'); ?>
 								</div>
 							</div>
 						</div>
@@ -77,25 +68,22 @@ get_header(); ?>
 			<div id="wrap">
 				<div id="border">
 					<div id="title">
-						<h2>What We Do</h2>
+						<h2><?php the_field('what_we_do_title'); ?></h2>
 					</div>
 					<div id="para">
-						<img class="landing-logos what-we-do-logos" src="wp-content/themes/design-lab-wordpress-landing-page-theme/img/what-we-do/pen.png">
-						<h3>Design</h3>
-						<p class="what-we-do-paragraphs">Our design practice offers a full range of services including branding strategy,
-							interaction and visual design and user experience testing.
-							Throughout your project, our designers create and implement visual designs and workflows, solicit user feedback, and work with you to make sure what gets built is what is needed.</p>
+						<img class="landing-logos what-we-do-logos" src="<?php the_field('what_we_do_logo_1'); ?>">
+						<h3><?php the_field('what_we_do_subtitle_1'); ?></h3>
+						<div class="what-we-do-paragraphs"><?php the_field('what_we_do_paragraph_1'); ?></div>
 					</div>
 					<div id="para">
-						<img class="landing-logos what-we-do-logos" src="wp-content/themes/design-lab-wordpress-landing-page-theme/img/what-we-do/code.png">
-						<h3>Development</h3>
-						<p class="what-we-do-paragraphs">All engineers are fluent in the latest enterprise, mobile and web development technologies.
-							They collaborate with your team to write, test, and improve code on a daily basis, using proven practices such as test-driven development and pair programing.</p>
+						<img class="landing-logos what-we-do-logos" src="<?php the_field('what_we_do_logo_2'); ?>">
+						<h3><?php the_field('what_we_do_subtitle_2'); ?></h3>
+						<div class="what-we-do-paragraphs"><?php the_field('what_we_do_paragraph_2'); ?></div>
 					</div>
 					<div id="para">
-						<img class="landing-logos what-we-do-logos" src="wp-content/themes/design-lab-wordpress-landing-page-theme/img/what-we-do/clipboard.png">
-						<h3>Project Management</h3>
-						<p class="what-we-do-paragraphs">Planning and development is iterative. Because we are constantly coding and testing, the products we build are always ready to go live. This iterative process allows for changes as business requirements evolve.</p>
+						<img class="landing-logos what-we-do-logos" src="<?php the_field('what_we_do_logo_3'); ?>">
+						<h3><?php the_field('what_we_do_subtitle_3'); ?></h3>
+						<div class="what-we-do-paragraphs"><?php the_field('what_we_do_paragraph_3'); ?></div>
 					</div>
 				</div>
 			</div>
@@ -104,62 +92,64 @@ get_header(); ?>
 
 		<!--Gallery Section-->
 		<section class="vertical-scrolling" id="gallery-section">
-			<div class="hover-tile-outer" id="hover-tile-outer-1">
+
+			<div class="hover-tile-outer" id="hover-tile-outer-1" style="background-image: url('<?php the_field('gallery_image_1'); ?>');">
 				<div class="hover-tile-container">
 					<div class="hover-tile hover-tile-visible"></div>
 					<div class="hover-tile hover-tile-hidden">
-						<h4>Hidden Copy</h4>
-						<p>Lorem ipsum dolor provident eligendi fugiat ad exercitationem sit amet, consectetur adipisicing elit. Unde, provident eligendi.</p>
+						<h4><?php the_field('gallery_title_1'); ?></h4>
+						<?php the_field('gallery_paragraph_1'); ?>
 					</div>
 				</div>
 			</div>
 
-			<div class="hover-tile-outer" id="hover-tile-outer-2">
+
+			<div class="hover-tile-outer" id="hover-tile-outer-2" style="background-image: url('<?php the_field('gallery_image_2'); ?>');">
 				<div class="hover-tile-container">
 					<div class="hover-tile hover-tile-visible"></div>
 					<div class="hover-tile hover-tile-hidden">
-						<h4>Hidden Copy</h4>
-						<p>Lorem ipsum dolor provident eligendi fugiat ad exercitationem sit amet, consectetur adipisicing elit. Unde, provident eligendi.</p>
+						<h4><?php the_field('gallery_title_2'); ?></h4>
+						<?php the_field('gallery_paragraph_2'); ?>
 					</div>
 				</div>
 			</div>
 
-			<div class="hover-tile-outer" id="hover-tile-outer-3">
+			<div class="hover-tile-outer" id="hover-tile-outer-3" style="background-image: url('<?php the_field('gallery_image_3'); ?>');">
 				<div class="hover-tile-container">
 					<div class="hover-tile hover-tile-visible"></div>
 					<div class="hover-tile hover-tile-hidden">
-						<h4>Hidden Copy</h4>
-						<p>Lorem ipsum dolor provident eligendi fugiat ad exercitationem sit amet, consectetur adipisicing elit. Unde, provident eligendi.</p>
+						<h4><?php the_field('gallery_title_3'); ?></h4>
+						<?php the_field('gallery_paragraph_3'); ?>
 					</div>
 				</div>
 			</div>
 
-			<div class="hover-tile-outer" id="hover-tile-outer-4">
+			<div class="hover-tile-outer" id="hover-tile-outer-4" style="background-image: url('<?php the_field('gallery_image_4'); ?>');">
 				<div class="hover-tile-container">
 					<div class="hover-tile hover-tile-visible"></div>
 					<div class="hover-tile hover-tile-hidden">
-						<h4>Hidden Copy</h4>
-						<p>Lorem ipsum dolor provident eligendi fugiat ad exercitationem sit amet, consectetur adipisicing elit. Unde, provident eligendi.</p>
+						<h4><?php the_field('gallery_title_4'); ?></h4>
+						<?php the_field('gallery_paragraph_4'); ?>
 					</div>
 				</div>
 			</div>
 
-			<div class="hover-tile-outer" id="hover-tile-outer-5">
+			<div class="hover-tile-outer" id="hover-tile-outer-5" style="background-image: url('<?php the_field('gallery_image_5'); ?>');">
 				<div class="hover-tile-container">
 					<div class="hover-tile hover-tile-visible"></div>
 					<div class="hover-tile hover-tile-hidden">
-						<h4>Hidden Copy</h4>
-						<p>Lorem ipsum dolor provident eligendi fugiat ad exercitationem sit amet, consectetur adipisicing elit. Unde, provident eligendi.</p>
+						<h4><?php the_field('gallery_title_5'); ?></h4>
+						<?php the_field('gallery_paragraph_5'); ?>
 					</div>
 				</div>
 			</div>
 
-			<div class="hover-tile-outer" id="hover-tile-outer-6">
+			<div class="hover-tile-outer" id="hover-tile-outer-6" style="background-image: url('<?php the_field('gallery_image_6'); ?>');">
 				<div class="hover-tile-container">
 					<div class="hover-tile hover-tile-visible"></div>
 					<div class="hover-tile hover-tile-hidden">
-						<h4>Hidden Copy</h4>
-						<p>Lorem ipsum dolor provident eligendi fugiat ad exercitationem sit amet, consectetur adipisicing elit. Unde, provident eligendi.</p>
+						<h4><?php the_field('gallery_title_6'); ?></h4>
+						<?php the_field('gallery_paragraph_6'); ?>
 					</div>
 				</div>
 			</div>
@@ -174,44 +164,22 @@ get_header(); ?>
 			<div id="wrap">
 				<div id="border">
 					<div id="title">
-						<h2>Contact Us</h2>
+						<h2><?php the_field('contact_us_title'); ?></h2>
 					</div>
 					<div id="para">
-						<p>Planning and development is iterative. Because we are constantly coding and testing, the products we build are always ready to go live. This iterative process allows for changes as business requirements evolve.
-						</p>
+						<?php the_field('contact_us_paragraph'); ?>
 						<!--Modals Section-->
 						<div id="modal-section">
 							<div class="modal">
 								<label for="modal-1">
-									<div class="modal-trigger modal-button">Contact Us</div>
+									<div class="modal-trigger modal-button"><?php the_field('contact_us_button_text'); ?></div>
 								</label>
 								<input class="modal-state" id="modal-1" type="checkbox" />
+
 								<div class="modal-fade-screen">
 									<div class="modal-inner">
 										<div class="modal-close" for="modal-1"></div>
-										<h1>Modal Title</h1>
-										<!-- Sample Modal Form-->
-										<form>
-											<div class="form-group">
-												<label for="exampleInputEmail1">Email address</label>
-												<input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
-											</div>
-											<div class="form-group">
-												<label for="exampleInputPassword1">Password</label>
-												<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-											</div>
-											<div class="form-group">
-												<label for="exampleInputFile">File input</label>
-												<input type="file" id="exampleInputFile">
-												<p class="help-block">Example block-level help text here.</p>
-											</div>
-											<div class="checkbox">
-												<label>
-													<input type="checkbox"> Check me out
-												</label>
-											</div>
-											<button type="submit" class="btn btn-default">Submit</button>
-										</form> <!-- END Sample Modal Form-->
+										<?php get_template_part( 'template-parts/content-modal', 'modal'); ?>
 									</div>
 								</div>
 							</div>

@@ -462,8 +462,7 @@ picture {
 /**
  * Hero
  *-------------------------------*/
-.hero {
-  background-image: url("img/header-images/hero-bg.png");
+#hero-section {
   background-position: 50%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -873,7 +872,7 @@ img#footer-logo {
 }
 @media screen and (min-width: 40em) {
   .modal .modal-inner {
-    max-height: 70%;
+    min-height: 70%;
     padding: 3em;
     width: 60%;
   }
@@ -920,6 +919,10 @@ img#footer-logo {
 }
 .modal .modal-state:checked + .modal-fade-screen .modal-inner {
   top: 0.5em;
+}
+
+#modal-section {
+  margin: 20px;
 }
 
 .modal-open {

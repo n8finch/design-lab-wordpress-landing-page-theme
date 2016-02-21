@@ -17,8 +17,8 @@
 	<footer class="footer" role="contentinfo">
 		<p>
                     <span id="footer-span">
-                    <img id="footer-logo" src="wp-content/themes/design-lab-wordpress-landing-page-theme/img/footer/footer-logo.png">
-                        © 2014. All Rights Reserved Ellipsis.com
+                    <img id="footer-logo" src="<?php the_field( 'footer_logo' ); ?>">
+	                    <?php the_field( 'footer_text' ); ?>
                     </span>
 		</p>
 	</footer>

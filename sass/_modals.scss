@@ -96,7 +96,7 @@
     width: 95%;
 
     @include media($medium-screen) {
-      max-height: 70%;
+      min-height: 70%;
       padding: $modal-padding;
       width: 60%;
     }
@@ -148,6 +148,10 @@
   .modal-state:checked + .modal-fade-screen .modal-inner {
     top: 0.5em;
   }
+}
+
+#modal-section {
+  margin: 20px;
 }
 
 .modal-open {
