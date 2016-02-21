@@ -1,0 +1,114 @@
+.hover-tile-outer {
+  $base-border-color: gainsboro !default;
+  $base-line-height: 1.5em !default;
+  $medium-screen: em(640) !default;
+  $hover-tile-height: 10em;
+  $base-spacing: 1.5em;
+
+  background-position: top;
+  background-size: cover;
+  background-color: beige;
+  border: 1px solid $base-border-color;
+  cursor: pointer;
+  height: $hover-tile-height;
+  margin-bottom: 10px;
+
+  @include media($medium-screen) {
+    width: 40%;
+  }
+
+  .hover-tile-container {
+    height: $hover-tile-height;
+    overflow: hidden;
+  }
+
+  .hover-tile-container:hover > .hover-tile {
+    @include transform(translate(0, -100%));
+  }
+
+  .hover-tile {
+    @include transition(all, 0.2s ease-in-out);
+    background: inherit;
+    color: white;
+    height: inherit;
+    overflow: hidden;
+    padding: $base-spacing;
+  }
+
+  .hover-tile-hidden {
+    background: transparentize(#000, 0.5);
+
+    p {
+      color: transparentize(#fff, 0.3);
+      line-height: $base-line-height;
+    }
+
+    h4 {
+      margin: 0 0 0.5em 0;
+    }
+  }
+}
+
+.hover-tile-outer {
+  margin: 10px 0;
+  flex: 1 1 25%;
+}
+
+#gallery-section {
+  max-width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+#hover-tile-outer-1 {
+  background: url("img/gallery/topworkz.png");
+}
+
+#hover-tile-outer-2 {
+  background: url("img/gallery/joint.png");
+  flex: 1 1 40%;
+  margin: 10px 20px;
+}
+
+#hover-tile-outer-3 {
+  background: url("img/gallery/market.png");
+}
+
+#hover-tile-outer-4 {
+  background: url("img/gallery/worktop.png");
+}
+
+#hover-tile-outer-5 {
+  background: url("img/gallery/label.png");
+  flex: 1 1 40%;
+  margin: 10px 20px;
+}
+
+#hover-tile-outer-6 {
+  background: url("img/gallery/kyiv.png");
+}
+
+@media all and (max-width:1000px) {
+
+  .gallery-section {
+    flex-wrap: wrap;
+  }
+
+  .hover-tile-outer {
+    flex: 1 1 100% !important;
+    margin: 10px !important;
+  }
+
+
+
+
+}
+
+@media all and (max-width:500px) {
+
+  .hover-tile-outer {
+    flex: 1 1 100% !important;
+  }
+
+}
