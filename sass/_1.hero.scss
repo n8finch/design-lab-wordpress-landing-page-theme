@@ -62,3 +62,16 @@
 //  -webkit-animation: none;
 //  animation:none;
 //}
+
+
+@media screen and (max-width: 768px) {
+
+  #hero-section {
+    height: 800px;
+  }
+
+  .hero-scroll {
+    display: none;
+  }
+
+}

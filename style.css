@@ -518,6 +518,15 @@ picture {
   animation: pulse 1.25s linear infinite;
 }
 
+@media screen and (max-width: 768px) {
+  #hero-section {
+    height: 800px;
+  }
+
+  .hero-scroll {
+    display: none;
+  }
+}
 /**
  * About Us
  *-------------------------------*/
@@ -563,6 +572,21 @@ div#para {
   text-align: center;
 }
 
+@media screen and (max-width: 768px) {
+  #border,
+  #title,
+  #para {
+    width: 100% !important;
+  }
+
+  #about-us {
+    padding: 0 20px;
+  }
+
+  #border {
+    padding: 10px;
+  }
+}
 /**
  * Services
  *-------------------------------*/
@@ -621,6 +645,26 @@ div#para {
   margin: auto;
 }
 
+@media screen and (max-width: 768px) {
+  #border-services,
+  #title-services,
+  #para-services {
+    width: 100% !important;
+  }
+
+  #border-services {
+    margin: 0;
+    padding: 10px;
+  }
+
+  .parallax-static-content > #wrap {
+    padding: 0 20px;
+  }
+
+  .parallax-window {
+    max-height: 100vh;
+  }
+}
 /**
  * What We Do
  *-------------------------------*/
@@ -634,6 +678,11 @@ div#para {
   margin: 20px 0;
 }
 
+@media screen and (max-width: 768px) {
+  #what-we-do-section {
+    padding: 0 20px !important;
+  }
+}
 /**
  * Gallery
  *-------------------------------*/
@@ -750,6 +799,15 @@ div#para {
   margin: auto;
 }
 
+@media screen and (max-width: 768px) {
+  #contact-us-section {
+    padding: 0 20px;
+  }
+
+  .modal-button {
+    width: auto;
+  }
+}
 /**
  * Footer
  *-------------------------------*/

@@ -45,3 +45,23 @@ div#para {
 p {
 
 }
+
+
+
+@media screen and (max-width: 768px) {
+
+  #border,
+  #title,
+  #para {
+    width: 100% !important;
+  }
+
+  #about-us {
+    padding: 0 20px;
+  }
+
+  #border {
+    padding: 10px;
+  }
+
+}

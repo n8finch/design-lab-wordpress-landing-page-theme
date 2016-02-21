@@ -56,3 +56,28 @@ $parallax-background-height: $parallax-window-height * 2;
   margin: auto;
 }
 
+
+
+@media screen and (max-width: 768px) {
+
+  #border-services,
+  #title-services,
+  #para-services {
+    width: 100% !important;
+  }
+
+  #border-services {
+    margin: 0;
+    padding: 10px;
+
+  }
+
+  .parallax-static-content > #wrap {
+    padding: 0 20px;
+  }
+
+  .parallax-window {
+    max-height: 100vh;
+  }
+
+}

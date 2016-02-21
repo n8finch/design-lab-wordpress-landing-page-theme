@@ -7,3 +7,12 @@
 .what-we-do-paragraphs {
   margin: 20px 0;
 }
+
+
+@media screen and (max-width: 768px) {
+
+  #what-we-do-section {
+    padding: 0 20px !important;
+  }
+
+}
