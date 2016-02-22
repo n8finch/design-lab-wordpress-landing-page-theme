@@ -1,3 +1,5 @@
+@charset "UTF-8";
+@import url(http://fonts.googleapis.com/css?family=Alegreya+Sans:300,400,700);
 html {
   box-sizing: border-box;
 }
@@ -532,14 +534,15 @@ picture {
  *-------------------------------*/
 #about-us {
   padding: 50px;
+  height: 100vh !important;
 }
 
-div#wrap {
+div.wrap {
   width: 100%;
   margin: 100px auto;
 }
 
-div#border {
+div.border {
   border: 1px solid black;
   height: auto;
   width: 700px;
@@ -547,7 +550,7 @@ div#border {
   padding-bottom: 40px;
 }
 
-div#title {
+div.title {
   background-color: white;
   width: 350px;
   height: 100px;
@@ -591,7 +594,7 @@ div#para {
  * Services
  *-------------------------------*/
 .parallax-window {
-  max-height: 70vh;
+  min-height: 100vh;
   overflow: hidden;
   position: relative;
   text-align: center;
@@ -602,6 +605,7 @@ div#para {
   color: #9A9A8A;
   position: relative;
   z-index: 9;
+  margin: 15% 0;
 }
 
 .parallax-background {
@@ -610,10 +614,10 @@ div#para {
   background-repeat: no-repeat;
   background-size: cover;
   background-color: beige;
-  height: 140vh;
+  height: 100vh;
   left: 0;
   position: absolute;
-  top: -23.33333vh;
+  top: 0;
   width: 100%;
 }
 
@@ -626,6 +630,10 @@ div#para {
   padding: 0 auto;
   padding-bottom: 40px;
   position: relative;
+}
+
+#services-section {
+  height: 100vh !important;
 }
 
 #title-services,
@@ -698,14 +706,58 @@ div#para {
 /**
  * What We Do
  *-------------------------------*/
+#-what-we-do-section {
+  height: 100vh !important;
+}
+
 .what-we-do-logos {
   width: 65px;
   height: 65px;
-  margin: 40px 0;
+  margin: 0;
 }
 
-.what-we-do-paragraphs {
+#what-we-do-wrap {
+  padding: 1px;
+}
+
+#what-we-do-border {
+  height: 80vh;
+  width: 900px;
+}
+
+#what-we-do-para {
   margin: 20px 0;
+}
+
+.what-we-do-left-column,
+.what-we-do-right-column {
+  text-align: center;
+}
+
+/* Column Classes
+    Link: http://twitter.github.io/bootstrap/assets/css/bootstrap-responsive.css
+--------------------------------------------- */
+.one-third,
+.two-thirds {
+  float: left;
+  margin-bottom: 10px;
+  margin-left: 2.564102564102564%;
+  padding: 20px;
+}
+
+.one-third {
+  width: 31.623931623931625%;
+  padding: 20px;
+}
+
+.two-thirds {
+  width: 65.81196581196582%;
+  padding: 20px;
+}
+
+.first {
+  clear: both;
+  margin-left: 0;
 }
 
 @media screen and (max-width: 768px) {
@@ -860,6 +912,243 @@ img#footer-logo {
   margin-right: 20px;
 }
 
+/**
+ * Full Page Styles
+ *-------------------------------*/
+/* ICON STYLES - ICON FROM: http://fontastic.me/
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+/* HELPER CLASSES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.l-left {
+  float: left;
+}
+
+.l-right {
+  float: right;
+}
+
+.end {
+  margin-top: 30px;
+  font-size: 3em;
+  font-weight: bold;
+  opacity: 0;
+  -webkit-transform: translateY(300px);
+  transform: translateY(300px);
+  -webkit-transition: opacity, -webkit-transform 1s;
+  transition: opacity, -webkit-transform 1s;
+  transition: opacity, transform 1s;
+  transition: opacity, transform 1s, -webkit-transform 1s;
+  -webkit-transition-delay: 1s;
+  transition-delay: 1s;
+}
+
+/* RESET-GENERAL STYLES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+/* NAV STYLES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.header-top {
+  background: transparent !important;
+  height: 70px;
+  padding: 0 10px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 12;
+  box-sizing: border-box;
+}
+
+.toggle-menu {
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  position: relative;
+  top: 10px;
+}
+
+.toggle-menu i {
+  position: absolute;
+  display: block;
+  height: 2px;
+  background: #333333;
+  width: 30px;
+  left: 10px;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.toggle-menu i:nth-child(1) {
+  top: 16px;
+}
+
+.toggle-menu i:nth-child(2) {
+  top: 24px;
+}
+
+.toggle-menu i:nth-child(3) {
+  top: 32px;
+}
+
+.open-menu i:nth-child(1) {
+  top: 25px;
+  -webkit-transform: rotateZ(45deg);
+  transform: rotateZ(45deg);
+}
+
+.open-menu i:nth-child(2) {
+  background: transparent;
+}
+
+.open-menu i:nth-child(3) {
+  top: 25px;
+  -webkit-transform: rotateZ(-45deg);
+  transform: rotateZ(-45deg);
+}
+
+nav {
+  height: 0;
+  opacity: 0;
+  box-sizing: border-box;
+  background: rgba(150, 150, 150, 0.25);
+  position: fixed;
+  top: 70px;
+  width: 100%;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.open-menu ~ nav {
+  opacity: 1;
+  padding: 0;
+  z-index: 15;
+  height: 80px;
+}
+
+nav.hide {
+  background: transparent !important;
+}
+
+nav ul {
+  padding: 0 10px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+nav li {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+nav li a {
+  font-size: 1.2em;
+  text-transform: uppercase;
+  color: #333333;
+  display: block;
+  padding: 30px;
+  text-align: center;
+  -webkit-transition: background .3s;
+  transition: background .3s;
+}
+
+nav li:nth-child(odd) a,
+body.fp-viewing-fifthSection-1 #menu li:nth-child(5) a {
+  background: #aaaaaa;
+}
+
+nav li:nth-child(even) a {
+  background: #aaaaaa;
+}
+
+nav li:nth-child(odd) a:hover {
+  background: #777777;
+}
+
+nav li:nth-child(even) a:hover {
+  background: #777777;
+}
+
+nav li.active a,
+body.fp-viewing-fifthSection-1 #menu li:last-child a {
+  background: #777777;
+}
+
+/* SECTION STYLES - fullPage.js
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+/* SLIDENAV STYLES - fullPage.js
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+#fp-nav ul li a span,
+.fp-slidesNav ul li a span {
+  background: #777777;
+  width: 8px;
+  height: 8px;
+  margin: -4px 0 0 -4px;
+}
+
+#fp-nav ul li a.active span,
+.fp-slidesNav ul li a.active span,
+#fp-nav ul li:hover a.active span,
+.fp-slidesNav ul li:hover a.active span {
+  width: 16px;
+  height: 16px;
+  margin: -8px 0 0 -8px;
+  background: transparent;
+  box-sizing: border-box;
+  border: 1px solid #24221F;
+}
+
+.fp-table-cell {
+  height: 100vh;
+}
+
+/* MQ STYLES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+@media screen and (max-width: 767px) {
+  nav ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+  nav li {
+    margin-top: 1px;
+  }
+
+  nav li a {
+    font-size: 1.5em;
+  }
+
+  .scroll-icon {
+    display: none;
+  }
+}
+@media screen and (max-width: 400px) {
+  html {
+    font-size: 50%;
+  }
+
+  .open-menu ~ nav {
+    padding: 20px 0;
+  }
+
+  nav li a {
+    padding: 3px;
+  }
+}
 /**
  * Modals
  *-------------------------------*/

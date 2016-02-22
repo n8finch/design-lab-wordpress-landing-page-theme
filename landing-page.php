@@ -21,19 +21,18 @@ get_header(); ?>
 						<h1><?php the_field('hero_title'); ?></h1>
 						<h4><?php the_field('hero_paragraph'); ?></h4>
 					</div>
-					<span class="hero-scroll icon ion-android-arrow-dropdown-circle"></span>
 				</div>
 			</div>
 		</section>
 
 		<!--About Us Section-->
 		<section class="vertical-scrolling" id="about-us">
-			<div id="wrap">
-				<div id="border">
-					<div id="title">
+			<div class="wrap">
+				<div class="border">
+					<div class="title">
 						<h2><?php the_field('about_us_title'); ?></h2>
 					</div>
-					<div id="para">
+					<div class="para">
 						<?php the_field('about_us_paragraph'); ?>
 					</div>
 				</div>
@@ -45,7 +44,7 @@ get_header(); ?>
 		<section class="vertical-scrolling" id="services-section">
 			<div id="js-parallax-window" class="parallax-window">
 				<div class="parallax-static-content">
-					<div id="wrap">
+					<div class="wrap">
 						<div id="border-services">
 							<div id="border-partial">
 								<div id="title-services">
@@ -65,25 +64,37 @@ get_header(); ?>
 
 		<!--What We Do Section-->
 		<section class="vertical-scrolling" id="what-we-do-section">
-			<div id="wrap">
-				<div id="border">
-					<div id="title">
+			<div class="wrap" id="what-we-do-wrap">
+				<div class="border" id="what-we-do-border">
+					<div class="title" id="what-we-do-title">
 						<h2><?php the_field('what_we_do_title'); ?></h2>
 					</div>
-					<div id="para">
-						<img class="landing-logos what-we-do-logos" src="<?php the_field('what_we_do_logo_1'); ?>">
-						<h3><?php the_field('what_we_do_subtitle_1'); ?></h3>
-						<div class="what-we-do-paragraphs"><?php the_field('what_we_do_paragraph_1'); ?></div>
-					</div>
-					<div id="para">
-						<img class="landing-logos what-we-do-logos" src="<?php the_field('what_we_do_logo_2'); ?>">
-						<h3><?php the_field('what_we_do_subtitle_2'); ?></h3>
-						<div class="what-we-do-paragraphs"><?php the_field('what_we_do_paragraph_2'); ?></div>
-					</div>
-					<div id="para">
-						<img class="landing-logos what-we-do-logos" src="<?php the_field('what_we_do_logo_3'); ?>">
-						<h3><?php the_field('what_we_do_subtitle_3'); ?></h3>
-						<div class="what-we-do-paragraphs"><?php the_field('what_we_do_paragraph_3'); ?></div>
+					<div class="para" id="what-we-do-para">
+						<div class="what-we-do-left-column one-third first">
+							<img class="landing-logos what-we-do-logos" src="<?php the_field('what_we_do_logo_1'); ?>">
+							<h3><?php the_field('what_we_do_subtitle_1'); ?></h3>
+						</div>
+						<div class="what-we-do-right-column two-thirds">
+							<div class="what-we-do-paragraphs"><?php the_field('what_we_do_paragraph_1'); ?></div>
+						</div>
+<!--					</div>-->
+<!--					<div class=para">-->
+						<div class="what-we-do-left-column two-thirds first">
+							<div class="what-we-do-paragraphs"><?php the_field('what_we_do_paragraph_2'); ?></div>
+						</div>
+						<div class="what-we-do-right-column one-third">
+							<img class="landing-logos what-we-do-logos" src="<?php the_field('what_we_do_logo_2'); ?>">
+							<h3><?php the_field('what_we_do_subtitle_2'); ?></h3>
+						</div>
+<!--					</div>-->
+<!--					<div class=para">-->
+						<div class="what-we-do-left-column one-third first">
+							<img class="landing-logos what-we-do-logos" src="<?php the_field('what_we_do_logo_3'); ?>">
+							<h3><?php the_field('what_we_do_subtitle_3'); ?></h3>
+						</div>
+						<div class="what-we-do-right-column two-thirds">
+							<div class="what-we-do-paragraphs"><?php the_field('what_we_do_paragraph_3'); ?></div>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -161,12 +172,12 @@ get_header(); ?>
 
 		<!--Contact Us Section-->
 		<section class="vertical-scrolling" id="contact-us-section">
-			<div id="wrap">
-				<div id="border">
-					<div id="title">
+			<div class="wrap">
+				<div class="border">
+					<div class="title">
 						<h2><?php the_field('contact_us_title'); ?></h2>
 					</div>
-					<div id="para">
+					<div class="para">
 						<?php the_field('contact_us_paragraph'); ?>
 						<!--Modals Section-->
 						<div id="modal-section">
@@ -186,6 +197,14 @@ get_header(); ?>
 						</div><!-- EndModals Section-->
 					</div>
 				</div>
+			</div>
+			<div class="footer" role="contentinfo">
+				<p>
+                    <span id="footer-span">
+                    <img id="footer-logo" src="<?php the_field( 'footer_logo' ); ?>">
+	                    <?php the_field( 'footer_text' ); ?>
+                    </span>
+				</p>
 			</div>
 		</section>
 

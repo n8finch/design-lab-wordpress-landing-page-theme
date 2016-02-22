@@ -1,8 +1,8 @@
-$parallax-window-height: 70vh;
-$parallax-background-height: $parallax-window-height * 2;
+$parallax-window-height: 100vh;
+$parallax-background-height: 100vh;
 
 .parallax-window {
-  max-height: $parallax-window-height;
+  min-height: $parallax-window-height;
   overflow: hidden;
   position: relative;
   text-align: center;
@@ -13,6 +13,7 @@ $parallax-background-height: $parallax-window-height * 2;
   color: #9A9A8A;
   position: relative;
   z-index: 9;
+  margin: 15% 0;
 }
 
 .parallax-background {
@@ -24,7 +25,7 @@ $parallax-background-height: $parallax-window-height * 2;
   height: $parallax-background-height;
   left: 0;
   position: absolute;
-  top: - $parallax-window-height / 3;
+  top: 0;
   width: 100%;
 }
 
@@ -37,6 +38,10 @@ $parallax-background-height: $parallax-window-height * 2;
   padding: 0 auto;
   padding-bottom: 40px;
   position: relative;
+}
+
+#services-section {
+  height: 100vh !important;
 }
 
 #title-services,

@@ -1,13 +1,16 @@
 #about-us {
   padding: 50px;
+  height: 100vh !important;
 }
 
-div#wrap {
+
+
+div.wrap {
   width: 100%;
   margin: 100px auto;
 }
 
-div#border {
+div.border {
   border: 1px solid black;
   height: auto;
   width: 700px;
@@ -15,7 +18,7 @@ div#border {
   padding-bottom: 40px;
 }
 
-div#title {
+div.title {
   background-color: white;
   width: 350px;
   height: 100px;

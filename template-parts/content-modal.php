@@ -7,4 +7,3 @@
 
 	<?php the_field( 'contact_us_popup_field' ); ?>
 
-<?php
