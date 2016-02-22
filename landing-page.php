@@ -58,7 +58,7 @@ get_header(); ?>
 						</div>
 					</div>
 				</div>
-				<div id="js-parallax-background" class="parallax-background"></div>
+				<div id="js-parallax-background" class="parallax-background" style="background-image: url('<?php the_field('services_background_image'); ?>');"></div>
 			</div>
 		</section>
 

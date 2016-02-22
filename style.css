@@ -625,6 +625,7 @@ div#para {
   margin: 100px auto;
   padding: 0 auto;
   padding-bottom: 40px;
+  position: relative;
 }
 
 #title-services,
@@ -633,8 +634,9 @@ div#para {
 }
 
 #title-services {
-  top: -40px;
+  top: -20px;
   color: #fff;
+  position: relative;
 }
 
 #para-services {
@@ -643,6 +645,26 @@ div#para {
   text-align: center;
   color: #fff;
   margin: auto;
+}
+
+#para-services:before {
+  content: "";
+  height: 1px;
+  width: 25%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: #fff;
+}
+
+#para-services:after {
+  content: "";
+  height: 1px;
+  width: 25%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-color: #fff;
 }
 
 @media screen and (max-width: 768px) {
@@ -663,6 +685,14 @@ div#para {
 
   .parallax-window {
     max-height: 100vh;
+  }
+
+  #para-services:before {
+    width: 5%;
+  }
+
+  #para-services:after {
+    width: 5%;
   }
 }
 /**
