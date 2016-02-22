@@ -1,3 +1,18 @@
+#gallery-section {
+  height: 100vh !important;
+}
+
+#gallery-section > * {
+  width: 100% !important;
+  display: flex !important;
+  flex-wrap: wrap !important;
+  margin: 150px 0;
+}
+
+#gallery-title {
+  margin: 0;
+}
+
 .hover-tile-outer {
   $base-border-color: gainsboro !default;
   $base-line-height: 1.5em !default;
@@ -67,8 +82,6 @@
 
 #hover-tile-outer-2 {
   background: url("img/gallery/joint.png");
-  flex: 1 1 40%;
-  margin: 10px 20px;
 }
 
 #hover-tile-outer-3 {
@@ -81,8 +94,6 @@
 
 #hover-tile-outer-5 {
   background: url("img/gallery/label.png");
-  flex: 1 1 40%;
-  margin: 10px 20px;
 }
 
 #hover-tile-outer-6 {

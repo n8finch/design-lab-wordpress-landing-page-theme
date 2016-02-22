@@ -537,6 +537,11 @@ picture {
   height: 100vh !important;
 }
 
+#about-us-border {
+  padding: 20px;
+  text-align: center;
+}
+
 div.wrap {
   width: 100%;
   margin: 100px auto;
@@ -768,6 +773,21 @@ div#para {
 /**
  * Gallery
  *-------------------------------*/
+#gallery-section {
+  height: 100vh !important;
+}
+
+#gallery-section > * {
+  width: 100% !important;
+  display: flex !important;
+  flex-wrap: wrap !important;
+  margin: 150px 0;
+}
+
+#gallery-title {
+  margin: 0;
+}
+
 .hover-tile-outer {
   background-position: top;
   background-size: cover;
@@ -831,8 +851,6 @@ div#para {
 
 #hover-tile-outer-2 {
   background: url("img/gallery/joint.png");
-  flex: 1 1 40%;
-  margin: 10px 20px;
 }
 
 #hover-tile-outer-3 {
@@ -845,8 +863,6 @@ div#para {
 
 #hover-tile-outer-5 {
   background: url("img/gallery/label.png");
-  flex: 1 1 40%;
-  margin: 10px 20px;
 }
 
 #hover-tile-outer-6 {
@@ -871,6 +887,16 @@ div#para {
 /**
  * Contact Us
  *-------------------------------*/
+#contact-us-section {
+  height: 100vh !important;
+  padding: 1px;
+}
+
+#contact-us-border {
+  padding: 20px;
+  text-align: center;
+}
+
 .modal-button {
   width: 300px;
   border-radius: 0;
@@ -893,18 +919,18 @@ div#para {
 /**
  * Footer
  *-------------------------------*/
-.footer {
+#footer-section {
   background: #fff;
   width: 100%;
   margin-bottom: 30px;
+  text-align: center !important;
 }
-.footer p {
+#footer-section p {
   color: #000;
   font-size: 0.9em;
   line-height: 1.5em;
   margin: auto;
   max-width: 35em;
-  text-align: center;
 }
 
 img#footer-logo {

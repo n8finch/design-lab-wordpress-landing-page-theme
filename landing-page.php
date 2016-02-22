@@ -28,7 +28,7 @@ get_header(); ?>
 		<!--About Us Section-->
 		<section class="vertical-scrolling" id="about-us">
 			<div class="wrap">
-				<div class="border">
+				<div class="border" id="about-us-border">
 					<div class="title">
 						<h2><?php the_field('about_us_title'); ?></h2>
 					</div>
@@ -104,6 +104,10 @@ get_header(); ?>
 		<!--Gallery Section-->
 		<section class="vertical-scrolling" id="gallery-section">
 
+			<div class="title" id="gallery-title">
+				<h2>Gallery</h2>
+			</div>
+
 			<div class="hover-tile-outer" id="hover-tile-outer-1" style="background-image: url('<?php the_field('gallery_image_1'); ?>');">
 				<div class="hover-tile-container">
 					<div class="hover-tile hover-tile-visible"></div>
@@ -172,8 +176,8 @@ get_header(); ?>
 
 		<!--Contact Us Section-->
 		<section class="vertical-scrolling" id="contact-us-section">
-			<div class="wrap">
-				<div class="border">
+			<div class="wrap" id="contact-us-section">
+				<div class="border" id="contact-us-border">
 					<div class="title">
 						<h2><?php the_field('contact_us_title'); ?></h2>
 					</div>
@@ -197,14 +201,12 @@ get_header(); ?>
 						</div><!-- EndModals Section-->
 					</div>
 				</div>
-			</div>
-			<div class="footer" role="contentinfo">
-				<p>
-                    <span id="footer-span">
+				<div id="footer-section">
+				<span id="footer-span">
                     <img id="footer-logo" src="<?php the_field( 'footer_logo' ); ?>">
-	                    <?php the_field( 'footer_text' ); ?>
+					<?php the_field( 'footer_text' ); ?>
                     </span>
-				</p>
+				</div>
 			</div>
 		</section>
 
